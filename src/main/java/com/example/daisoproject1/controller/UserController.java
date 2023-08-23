@@ -31,7 +31,9 @@ public class UserController {
     UserRepository userRepository;
 
     @PostMapping("/signup")
-    public String signUp(@RequestBody User user){
-        return userService.signup(user);
+    public String signUp(@RequestBody UserSignUpDto userSignUpDto){
+        User user = userSignUpDto.toEntity();
+        User saved = userRepository.save(user);
+        return "success";
     }
 }

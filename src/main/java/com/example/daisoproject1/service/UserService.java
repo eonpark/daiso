@@ -19,14 +19,14 @@ public class UserService {
         String password= user.getPassword();
         String proId = user.getProId();
 
-        User user1 = new User();
-        user1.setName(name);
-        user1.setPassword(password);
-        user1.setProId(proId);
+//        User user1 = new User();
+//        user1.setName(name);
+//        user1.setPassword(password);
+//        user1.setProId(proId);
         if (userRepository.findByName(name) != null) {
             return "failed";
         }
-        userRepository.save(user1);
+        userRepository.save(user);
         return "success";
 
     }
