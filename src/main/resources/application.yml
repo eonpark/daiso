@@ -7,6 +7,30 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate.format_sql: true
+security:
+  jwt:
+    token:
+      secret-key: "secretsecretsecretsecretsecret"
+      expire-length: 3600000
+
+
+cloud:
+  aws:
+    credentials:
+      accessKey: AKIAWMVGHXLLPQYSZ573
+      secretKey: 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
+    s3:
+      bucket: daiso-bucket
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false
+
+
+server:
+  servlet:
+    encoding:
+      charset: UTF-8

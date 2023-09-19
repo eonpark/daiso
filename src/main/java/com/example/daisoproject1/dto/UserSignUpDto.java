@@ -11,23 +11,11 @@ public class UserSignUpDto {
     private String password;
     private String name;
 
-    public String getProId() {
-        return proId;
-    }
-
-    public void setProId(String proId) {
-        this.proId = proId;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public User toEntity() {
-            return new User(null,name, proId,password);
+    public static User toEntity(UserSignUpDto userSignUpDto) {
+            return new User(
+                    userSignUpDto.name,
+                    userSignUpDto.proId,
+                    userSignUpDto.password
+            );
     }
 }
