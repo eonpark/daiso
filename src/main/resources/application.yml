@@ -20,8 +20,8 @@ security:
 cloud:
   aws:
     credentials:
-      accessKey: AKIAWMVGHXLLPQYSZ573
-      secretKey: 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
+      accessKey: -
+      secretKey: -
     s3:
       bucket: daiso-bucket
     region:
